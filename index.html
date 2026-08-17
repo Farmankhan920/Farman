@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Farman Ahmad — Creative Technologist &amp; AI Tools Explorer</title>
+<meta name="description" content="Farman Ahmad is a creative technologist working across AI experimentation, mobile app creation, automation and interactive digital products.">
+<meta name="theme-color" content="#FBF7EE">
+
+<!-- Open Graph (replace with real image before deploying) -->
+<meta property="og:title" content="Farman Ahmad — Creative Technologist">
+<meta property="og:description" content="AI • Apps • Automation • Creative Technology. A continuously evolving lab of interactive digital products.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Import map: three.js loaded from CDN, no build step required -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div style="display:none" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M4.4 4.4l1.85 1.85M17.75 17.75l1.85 1.85M2.5 12h2.6M18.9 12h2.6M4.4 19.6l1.85-1.85M17.75 6.25l1.85-1.85"/></symbol>
+  <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="icon-ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"/><circle cx="12" cy="12" r="4"/></symbol>
+  <symbol id="icon-app" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><line x1="10.3" y1="18.3" x2="13.7" y2="18.3"/></symbol>
+  <symbol id="icon-automation" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7" r="2.6"/><circle cx="17" cy="17" r="2.6"/><path d="M9.6 8.6 14.4 15.4M17 4.5v2.3M17 4.5c-3.5 0-6 2-7.5 4.6"/></symbol>
+  <symbol id="icon-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 7 3.8 12l4.7 5M15.5 7l4.7 5-4.7 5M13.5 5 10.5 19"/></symbol>
+  <symbol id="icon-design" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 15.5 8.5a2 2 0 0 0 0-2.8l-.7-.7a2 2 0 0 0-2.8 0L4 13.5V20h6.5Z"/><path d="M12.5 6.5l4 4"/></symbol>
+  <symbol id="icon-prompt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16M4 12h10M4 18.5h13"/></symbol>
+  <symbol id="icon-content" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9h17M8 4.5V9"/><circle cx="9.2" cy="13.2" r="1.3" fill="currentColor" stroke="none"/><path d="M13 15.5l2.5-3.2L20 17.5"/></symbol>
+  <symbol id="icon-lab" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5M10 3v6.2L5.3 18a2 2 0 0 0 1.8 3h9.8a2 2 0 0 0 1.8-3L14 9.2V3"/><path d="M8 15h8"/></symbol>
+  <symbol id="icon-external-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+  <symbol id="icon-contact" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="icon-process-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h14M13 6.5 18.5 12 13 17.5"/></symbol>
+  <symbol id="icon-project-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="14" rx="3"/><path d="M8 15l3.2-4 2.3 2.7L16.5 10" stroke-linejoin="round"/></symbol>
+</svg>
+</div>
+
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="noise-overlay" aria-hidden="true"></div>
+<div class="ambient-orbs" aria-hidden="true"><span></span><span></span><span></span></div>
+<div class="cursor-light" aria-hidden="true"></div>
+
+<!-- ============ GLOBAL FLYING 3D LAYER — persists across the whole page ============ -->
+<div id="dragon-layer" aria-hidden="true">
+  <canvas id="hero-canvas"></canvas>
+  <div class="dragon-glow" id="dragon-glow"></div>
+</div>
+
+<div class="hero-loader" id="hero-loader">
+  <div class="loader-ring"></div>
+  <p id="loader-text">Loading scene · 0%</p>
+</div>
+
+<div class="hero-fallback" id="hero-fallback">
+  <div class="fb-inner">
+    <h3>The scene couldn't load</h3>
+    <p>Your browser or connection blocked the 3D model. Everything else on this page still works — scroll on to explore Farman's work.</p>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container">
+    <a href="#hero" class="brand" aria-label="Farman Ahmad — home">
+      <img src="assets/icons/logo.svg" alt="" width="120" height="32" style="height:26px;width:auto;">
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about" data-nav>About</a>
+      <a href="#create" data-nav>Create</a>
+      <a href="#projects" data-nav>Projects</a>
+      <a href="#skills" data-nav>Skills</a>
+      <a href="#lab" data-nav>Lab</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+        <svg class="icon-sun" width="18" height="18" aria-hidden="true"><use href="#icon-sun"/></svg>
+        <svg class="icon-moon" width="18" height="18" aria-hidden="true"><use href="#icon-moon"/></svg>
+      </button>
+      <button class="icon-btn menu-toggle" id="menu-open" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="18" height="18" aria-hidden="true"><use href="#icon-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="container" style="padding:0;display:flex;flex-direction:column;height:100%;">
+    <div style="display:flex;justify-content:flex-end;">
+      <button class="icon-btn" id="menu-close" type="button" aria-label="Close menu">
+        <svg width="18" height="18" aria-hidden="true"><use href="#icon-close"/></svg>
+      </button>
+    </div>
+    <nav>
+      <a href="#about" data-nav-mobile>About</a>
+      <a href="#create" data-nav-mobile>Create</a>
+      <a href="#projects" data-nav-mobile>Projects</a>
+      <a href="#skills" data-nav-mobile>Skills</a>
+      <a href="#lab" data-nav-mobile>Lab</a>
+      <a href="#process" data-nav-mobile>Process</a>
+      <a href="#contact" data-nav-mobile>Contact</a>
+    </nav>
+    <div class="mm-foot">
+      <span>FARMAN AHMAD</span>
+      <span id="mm-clock">AI · APPS · AUTOMATION</span>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ============ HERO — split layout; the dragon flies over the WHOLE page ============ -->
+  <section id="hero" class="hero-split">
+    <div class="container hero-split-grid">
+      <div class="hero-photo-col reveal" id="hero-photo-col">
+        <div class="hero-photo-frame">
+          <img src="assets/images/farman-hero.png" alt="Farman Ahmad" width="620" height="1179" fetchpriority="high">
+          <div class="portrait-frame" aria-hidden="true"></div>
+        </div>
+        <span class="hero-photo-tag glass">Farman Ahmad · Creative Technologist</span>
+      </div>
+
+      <div class="hero-text-col">
+        <p class="eyebrow reveal">AI · APPS · AUTOMATION · CREATIVE TECHNOLOGY</p>
+        <h1 class="hero-title-split reveal">FARMAN<br><span class="accent">AHMAD</span></h1>
+        <p class="hero-sub reveal">A creative technology lab exploring AI tools, mobile builds and automation — one experiment at a time.</p>
+        <div class="hero-status glass reveal">
+          <span class="dot" aria-hidden="true"></span> Available for experiments
+        </div>
+        <div class="hero-cta-row reveal">
+          <a href="#projects" class="btn btn-primary">See the work <svg width="16" height="16" aria-hidden="true"><use href="#icon-external-link"/></svg></a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue" id="scroll-cue">
+      <span>Scroll — watch the dragon fly</span>
+      <img src="assets/icons/scroll-indicator.svg" alt="" width="20" height="32">
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-portrait reveal">
+          <img src="assets/images/farman-portrait.png" alt="Portrait of Farman Ahmad" loading="lazy" width="700" height="1270">
+          <div class="portrait-frame" aria-hidden="true"></div>
+          <span class="portrait-tag glass">Farman Ahmad</span>
+        </div>
+
+        <div class="about-text">
+          <p class="eyebrow reveal">About</p>
+          <h2 class="section-title reveal">Building at the edge of <em>AI, apps and automation</em>.</h2>
+          <div style="margin-top:26px;">
+            <p class="reveal">Farman Ahmad is a creative technologist who spends most days somewhere between an AI playground, an Android build, and a half-finished automation script. The work is less about a single specialty and more about a habit — picking up a new tool, taking it apart, and finding what it can build.</p>
+            <p class="reveal">That curiosity shows up as mobile app concepts, prompt-engineered AI workflows, small automation systems that quietly remove repetitive work, and interactive interfaces built for the sake of trying an idea out. Design and code are treated as one practice, not two.</p>
+            <p class="reveal">This portfolio itself is part of that lab — an evolving, hands-on record of what's currently being explored, rather than a fixed resume.</p>
+          </div>
+
+          <div class="about-focus">
+            <div class="focus-chip glass reveal"><svg width="18" height="18" aria-hidden="true"><use href="#icon-ai"/></svg>AI Experimentation</div>
+            <div class="focus-chip glass reveal"><svg width="18" height="18" aria-hidden="true"><use href="#icon-app"/></svg>Mobile App Creation</div>
+            <div class="focus-chip glass reveal"><svg width="18" height="18" aria-hidden="true"><use href="#icon-automation"/></svg>Automation Systems</div>
+            <div class="focus-chip glass reveal"><svg width="18" height="18" aria-hidden="true"><use href="#icon-design"/></svg>UI/UX &amp; Creative Tech</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT I CREATE ============ -->
+  <section id="create" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal">What I Create</p>
+        <h2 class="section-title reveal">A working set of <em>tools and experiments</em>.</h2>
+        <p class="section-lede reveal">Each project starts as a small question — what if this could be automated, generated, or made interactive — and gets built out from there.</p>
+      </div>
+
+      <div class="capabilities-grid reveal-stagger">
+        <div class="cap-card glass reveal" style="--i:0">
+          <div class="cap-icon"><svg width="22" height="22" aria-hidden="true"><use href="#icon-ai"/></svg></div>
+          <h3>AI-Powered Apps</h3>
+          <p>Small applications built around language and generative models, designed to feel fast and purposeful rather than gimmicky.</p>
+        </div>
+        <div class="cap-card glass reveal" style="--i:1">
+          <div class="cap-icon"><svg width="22" height="22" aria-hidden="true"><use href="#icon-app"/></svg></div>
+          <h3>Android &amp; Mobile Concepts</h3>
+          <p>APK builds and mobile app concepts, from utility tools to interactive experiences, built and tested on-device.</p>
+        </div>
+        <div class="cap-card glass reveal" style="--i:2">
+          <div class="cap-icon"><svg width="22" height="22" aria-hidden="true"><use href="#icon-automation"/></svg></div>
+          <h3>Automation Systems</h3>
+          <p>Scripts and pipelines that take repetitive digital work — posting, sorting, tracking — off the to-do list.</p>
+        </div>
+        <div class="cap-card glass reveal" style="--i:3">
+          <div class="cap-icon"><svg width="22" height="22" aria-hidden="true"><use href="#icon-code"/></svg></div>
+          <h3>Interactive Web Experiences</h3>
+          <p>Scroll-driven layouts, motion and 3D presentation used to make digital work feel alive rather than static.</p>
+        </div>
+        <div class="cap-card glass reveal" style="--i:4">
+          <div class="cap-icon"><svg width="22" height="22" aria-hidden="true"><use href="#icon-design"/></svg></div>
+          <h3>UI/UX Design</h3>
+          <p>Interfaces designed around clarity and restraint first, with detail and motion layered in with intent.</p>
+        </div>
+        <div class="cap-card glass reveal" style="--i:5">
+          <div class="cap-icon"><svg width="22" height="22" aria-hidden="true"><use href="#icon-prompt"/></svg></div>
+          <h3>AI Prompt Engineering</h3>
+          <p>Structured prompting and workflow design that shapes AI tools into dependable, repeatable outputs.</p>
+        </div>
+        <div class="cap-card glass reveal" style="--i:6">
+          <div class="cap-icon"><svg width="22" height="22" aria-hidden="true"><use href="#icon-content"/></svg></div>
+          <h3>Creative Content Tools</h3>
+          <p>Utilities that speed up content production — from typography motion to automated video and graphics workflows.</p>
+        </div>
+        <div class="cap-card glass reveal" style="--i:7">
+          <div class="cap-icon"><svg width="22" height="22" aria-hidden="true"><use href="#icon-lab"/></svg></div>
+          <h3>Experimental Products</h3>
+          <p>Early-stage, unpolished builds kept intentionally rough — proof that an idea works before it's refined.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal">Featured Projects</p>
+        <h2 class="section-title reveal">Selected <em>builds</em> from the lab.</h2>
+        <p class="section-lede reveal">A working set — some polished, some still in progress. Each one solved a real, specific problem.</p>
+      </div>
+
+      <div class="projects-scroller reveal-stagger">
+
+        <article class="project-card glass reveal" style="--i:0">
+          <svg class="project-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9h17M8 4.5V9"/></svg>
+          <span class="p-index">01 / Content Tools</span>
+          <h3>Typography Video Generator</h3>
+          <p>A tool for turning plain text into styled, animated typography videos — built to speed up short-form content production without manual keyframing.</p>
+          <div class="tag-row">
+            <span class="tag">Motion</span><span class="tag">Automation</span><span class="tag">Content</span>
+          </div>
+          <span class="project-link">View concept <svg width="15" height="15" aria-hidden="true"><use href="#icon-external-link"/></svg></span>
+        </article>
+
+        <article class="project-card glass reveal" style="--i:1">
+          <svg class="project-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="7" cy="7" r="2.6"/><circle cx="17" cy="17" r="2.6"/><path d="M9.6 8.6 14.4 15.4"/></svg>
+          <span class="p-index">02 / Automation</span>
+          <h3>Instagram Automation Tool</h3>
+          <p>A workflow system for scheduling and managing Instagram activity, reducing repetitive manual posting through rule-based automation.</p>
+          <div class="tag-row">
+            <span class="tag">Automation</span><span class="tag">Social</span><span class="tag">Scripting</span>
+          </div>
+          <span class="project-link">View concept <svg width="15" height="15" aria-hidden="true"><use href="#icon-external-link"/></svg></span>
+        </article>
+
+        <article class="project-card glass reveal" style="--i:2">
+          <svg class="project-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><line x1="10.3" y1="18.3" x2="13.7" y2="18.3"/></svg>
+          <span class="p-index">03 / Mobile</span>
+          <h3>APK Analyzer</h3>
+          <p>A utility for inspecting Android APK packages — surfacing permissions, structure and metadata for faster, clearer app analysis.</p>
+          <div class="tag-row">
+            <span class="tag">Android</span><span class="tag">Utility</span><span class="tag">Termux</span>
+          </div>
+          <span class="project-link">View concept <svg width="15" height="15" aria-hidden="true"><use href="#icon-external-link"/></svg></span>
+        </article>
+
+        <article class="project-card glass reveal" style="--i:3">
+          <svg class="project-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M9.5 3h5M10 3v6.2L5.3 18a2 2 0 0 0 1.8 3h9.8a2 2 0 0 0 1.8-3L14 9.2V3"/></svg>
+          <span class="p-index">04 / Systems</span>
+          <h3>Jacket Factory Manager</h3>
+          <p>An internal management concept for tracking production stages, orders and inventory across a small garment manufacturing workflow.</p>
+          <div class="tag-row">
+            <span class="tag">Systems</span><span class="tag">UI/UX</span><span class="tag">Workflow</span>
+          </div>
+          <span class="project-link">View concept <svg width="15" height="15" aria-hidden="true"><use href="#icon-external-link"/></svg></span>
+        </article>
+
+        <article class="project-card glass reveal" style="--i:4;grid-column:1 / -1;">
+          <svg class="project-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M4 5.5h16M4 12h10M4 18.5h13"/></svg>
+          <span class="p-index">05 / AI + Motion</span>
+          <h3>AI Motion Graphics Editor</h3>
+          <p>An AI-assisted editor concept for generating and adjusting motion graphics from simple prompts, aimed at cutting down manual animation time for short creative pieces.</p>
+          <div class="tag-row">
+            <span class="tag">AI</span><span class="tag">Motion Graphics</span><span class="tag">Prompting</span>
+          </div>
+          <span class="project-link">View concept <svg width="15" height="15" aria-hidden="true"><use href="#icon-external-link"/></svg></span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal">Skills &amp; Technology</p>
+        <h2 class="section-title reveal">Tools currently in <em>active use</em>.</h2>
+        <p class="section-lede reveal">A working toolkit rather than a scorecard — no invented percentages, just what's genuinely in rotation.</p>
+      </div>
+
+      <div class="skills-groups">
+        <div class="skill-group">
+          <h3>AI &amp; Prompting</h3>
+          <div class="skill-pills reveal-stagger">
+            <span class="skill-pill glass reveal" style="--i:0">AI Tools Exploration</span>
+            <span class="skill-pill glass reveal" style="--i:1">Prompt Engineering</span>
+            <span class="skill-pill glass reveal" style="--i:2">AI Workflow Design</span>
+            <span class="skill-pill glass reveal" style="--i:3">Generative Content</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Mobile &amp; Systems</h3>
+          <div class="skill-pills reveal-stagger">
+            <span class="skill-pill glass reveal" style="--i:0">Android / APK Development</span>
+            <span class="skill-pill glass reveal" style="--i:1">Termux</span>
+            <span class="skill-pill glass reveal" style="--i:2">Automation Scripting</span>
+            <span class="skill-pill glass reveal" style="--i:3">App Prototyping</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Web &amp; Interface</h3>
+          <div class="skill-pills reveal-stagger">
+            <span class="skill-pill glass reveal" style="--i:0">HTML / CSS / JavaScript</span>
+            <span class="skill-pill glass reveal" style="--i:1">UI/UX Design</span>
+            <span class="skill-pill glass reveal" style="--i:2">Interactive &amp; 3D Web</span>
+            <span class="skill-pill glass reveal" style="--i:3">Motion Design</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Content</h3>
+          <div class="skill-pills reveal-stagger">
+            <span class="skill-pill glass reveal" style="--i:0">Content Creation</span>
+            <span class="skill-pill glass reveal" style="--i:1">Video &amp; Motion Graphics</span>
+            <span class="skill-pill glass reveal" style="--i:2">Digital Product Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LAB ============ -->
+  <section id="lab" class="section">
+    <div class="container">
+      <div class="lab-section reveal">
+        <div class="avatar-float lab-avatar-wrap">
+          <span class="avatar-blob" aria-hidden="true"></span>
+          <img class="lab-avatar" src="assets/images/farman-avatar-1.png" alt="Farman Ahmad — illustrated" loading="lazy" width="340" height="525">
+        </div>
+        <p class="eyebrow">The Lab</p>
+        <h2 class="section-title" style="margin-top:16px;">Experiments &amp; <em>prototypes</em> in progress.</h2>
+        <p class="section-lede">This portfolio is never really finished. These are early explorations — some will grow into full projects, some won't, and that's the point of a lab.</p>
+
+        <div class="lab-grid reveal-stagger">
+          <div class="lab-item reveal" style="--i:0">
+            <span class="lab-status"><span class="dot"></span>In Progress</span>
+            <h4>Prompt Chain Playground</h4>
+            <p>Testing multi-step prompt chains for more reliable AI outputs across small automation tasks.</p>
+          </div>
+          <div class="lab-item reveal" style="--i:1">
+            <span class="lab-status"><span class="dot"></span>Prototype</span>
+            <h4>Gesture-Based Mobile UI</h4>
+            <p>Exploring touch-gesture navigation patterns for Android interfaces beyond standard taps and swipes.</p>
+          </div>
+          <div class="lab-item reveal" style="--i:2">
+            <span class="lab-status"><span class="dot"></span>Early Concept</span>
+            <h4>Automated Content Pipeline</h4>
+            <p>A concept for connecting generation, editing and scheduling into a single automated content flow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section id="process" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal">Process</p>
+        <h2 class="section-title reveal">How an <em>experiment</em> becomes a build.</h2>
+      </div>
+
+      <div class="process-row reveal-stagger">
+        <div class="process-step glass reveal" style="--i:0"><span class="p-num">01</span><h4>Idea</h4><p>Start from a real problem or curiosity worth testing.</p></div>
+        <div class="process-arrow-wrap"><svg width="18" height="18" aria-hidden="true"><use href="#icon-process-arrow"/></svg></div>
+        <div class="process-step glass reveal" style="--i:1"><span class="p-num">02</span><h4>Design</h4><p>Shape the interface and flow before writing production code.</p></div>
+        <div class="process-arrow-wrap"><svg width="18" height="18" aria-hidden="true"><use href="#icon-process-arrow"/></svg></div>
+        <div class="process-step glass reveal" style="--i:2"><span class="p-num">03</span><h4>Build</h4><p>Turn the design into a working, testable version.</p></div>
+        <div class="process-arrow-wrap"><svg width="18" height="18" aria-hidden="true"><use href="#icon-process-arrow"/></svg></div>
+        <div class="process-step glass reveal" style="--i:3"><span class="p-num">04</span><h4>Experiment</h4><p>Push the build's limits and see what breaks or surprises.</p></div>
+        <div class="process-arrow-wrap"><svg width="18" height="18" aria-hidden="true"><use href="#icon-process-arrow"/></svg></div>
+        <div class="process-step glass reveal" style="--i:4"><span class="p-num">05</span><h4>Refine</h4><p>Tighten the details until it feels like a finished product.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-panel glass-light reveal">
+        <div class="avatar-float contact-avatar-wrap">
+          <span class="avatar-blob" aria-hidden="true"></span>
+          <img class="contact-avatar" src="assets/images/farman-avatar-2.png" alt="Farman Ahmad — illustrated" loading="lazy" width="280" height="582">
+        </div>
+        <p class="eyebrow" style="justify-content:center;">Contact</p>
+        <h2>Have an idea worth <em>building</em>?</h2>
+        <p>Open to conversations about AI experiments, mobile builds, automation and interactive projects. Reach out and let's see what it could become.</p>
+        <div class="contact-actions">
+          <!-- CONFIG: replace href="#" with a real mailto:, once available -->
+          <a href="#" class="btn btn-primary" data-config="email" aria-label="Email Farman Ahmad">
+            <svg width="16" height="16" aria-hidden="true"><use href="#icon-contact"/></svg> Get in touch
+          </a>
+          <!-- CONFIG: replace href="#" with a real profile URL, once available -->
+          <a href="#" class="btn btn-ghost" data-config="social" aria-label="View social profile">
+            View profile <svg width="16" height="16" aria-hidden="true"><use href="#icon-external-link"/></svg>
+          </a>
+        </div>
+        <div class="contact-meta">
+          <span>BASED · REMOTE-FRIENDLY</span>
+          <span>OPEN TO EXPERIMENTS</span>
+          <span>RESPONSE TIME · VARIES</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <a href="#hero" class="brand">
+      <img src="assets/icons/logo.svg" alt="Farman Ahmad" width="120" height="32" style="height:22px;width:auto;">
+    </a>
+    <p class="footer-note">© <span id="year"></span> Farman Ahmad — Creative Technology Lab</p>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="js/three-scene.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
